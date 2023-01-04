@@ -1,0 +1,366 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Mouse Memoirs';
+  font-weight: 10px;
+}
+:root{
+  --colorP: #2af;
+  --colorS: #92a;
+  --colorPP: #22a;
+  --colorSS: #62a;
+}
+body{
+  overflow: hidden;
+}
+.nav_container{
+  background-color: #000;
+  animation-name: gradient;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100px;
+  transition: all 2s;
+}
+.child_collage{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-name: backshadow;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+.collage_shadow{
+  height: 100%;
+  width: 105%;
+}
+
+.collage{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  right: 0;
+  overflow: hidden;
+
+}
+.animes{
+  width: 110%;
+  height: 100%;
+  object-fit: fill;
+
+
+}
+
+.nav_child{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 10px -40px;
+  width: 410px;
+  height: 80px;
+  box-shadow: inset 0 0 30px #000;
+  box-sizing: border-box;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.imagen2{
+  width: 100%;
+}
+
+.canvasH{
+  transform: scale(1.2);
+}
+a{
+  box-sizing: border-box;
+  padding-top: 25px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  text-shadow: 0 0 10px var(--colorS),0 0 20px var(--colorS);
+  letter-spacing: 2px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+
+}
+
+
+
+.history{
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+.logo{
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 50px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+label p{
+  width: 100%;
+  margin-left: 10px;
+  font-size: 45px;
+}
+label p:first-child{
+  
+  animation-name: colorLogoP;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+label p:last-child{
+  position: absolute;
+  bottom: 2px;
+  animation-name: colorLogoS;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+}
+.container{
+  margin: 40px auto;
+  width: 600px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  animation-name: together;
+  animation-duration:  2s;
+  animation-fill-mode: forwards;
+
+}
+ 
+
+.container__child{
+position: relative;
+color: white;
+border: none;
+text-align: center;
+overflow: hidden;
+}
+
+.shadow{
+
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding-top: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  clip-path: circle(0% at 50% 50%);
+  background-color: transparent;
+  transition: all 0.5s 0.3s;
+  
+
+}
+.shadow p{
+  margin: 0 10px;
+}
+@keyframes colorLogoP {
+  from{
+    color: #000;
+  }
+  to{
+    color: var(--colorP);
+  }
+}
+@keyframes colorLogoS {
+  from{
+    color: #000;
+  }
+  to{
+    color: var(--colorS);
+  }
+  
+}
+@keyframes together {
+  from{
+
+    width: 100px;
+    opacity: 0;
+
+  }
+  to{
+      width: 550px;
+      opacity: 1;
+  }
+
+}
+
+
+ @keyframes backshadow {
+  from{
+    opacity: 0.5;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.right {
+  box-shadow: inset 0 0 150px 80px var(--colorP);
+
+}
+.left {
+  box-shadow: inset 0 0 150px 80px var(--colorS);
+
+}
+ .titulo{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50px;
+  z-index: 2;
+}
+
+
+.rondas10 img{
+  position:absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.rondas15 img{
+  position:absolute;
+  left: 0;
+  z-index: -1;
+  
+
+}
+.rondas10{
+  box-shadow: inset 0 0 30px 20px var(--colorP);
+  transition: box-shadow 0.5s ease;
+}
+.rondas15{
+  box-shadow: inset 0 0 30px 20px var(--colorS);
+  transition: box-shadow 0.5s ease;
+
+}
+
+
+
+img{
+  display: inline-block;
+  width: 300px;
+  height: 470px;
+  margin-left: -15px;
+  object-fit: contain;
+
+  }
+
+  .nav_child:hover a{
+    color: var(--colorP);
+    text-shadow: 0 0 10px var(--colorSS),0 0 20px var(--colorSS),0 0 30px var(--colorSS),0 0 40px var(--colorSS);
+
+  }
+
+
+  .rondas10:hover >.shadow-ragnarok{
+    clip-path: circle(100% at 50% 50%);
+    background-color: var(--colorPP);
+    opacity: 0.6;
+    
+  
+  }
+.rondas10:hover{
+    box-shadow: inset 0 0 0 0 transparent
+  }
+.rondas15:hover{
+  box-shadow: inset 0 0 0 0 transparent
+}
+.rondas15:hover .shadow-history{
+  clip-path: circle(100% at 50% 50%);
+  background-color: var(--colorSS);
+  opacity: 0.6;
+  
+
+}
+
+.lds-ellipsis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  animation-name: precarga;
+  animation-fill-mode: forwards;
+  animation-duration: 01s;
+  animation-delay: 1s;
+  z-index: 20; 
+  opacity: 0.9;
+}
+.lds-ellipsis div div {
+  background: #5af;
+  height: 100%;
+  animation-name: loadBar2;
+  animation-duration: 1.5s;
+}
+.lds-ellipsis > div{
+  border-radius: 0.25em;
+  border: 2px solid #fff;
+  width: 210px;
+  height: 8px;
+  animation-name: loadBar;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  margin-bottom: 150px
+
+}
+.genkidama{
+  display: block;
+  height: 248px;
+  width: 230px;
+  margin-bottom: 15px
+}
+@keyframes loadBar {
+  50%{
+    box-shadow: 0 0 5px 3px #fff;
+  }
+  100%{
+    box-shadow: 0 0 0px 2px #fff;
+  }
+}
+@keyframes loadBar2 {
+  0%{
+    width: 0%;
+  }
+  20%{
+    width: 20%;
+  }
+
+  60%{
+    width: 60%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes precarga {
+0%{
+  opacity: 1;
+}
+100%{
+  opacity: 0.0;
+  visibility: hidden;
+}
+}
+@keyframes gradient {
+  
+  to{
+    background: linear-gradient(to right, #111 20%,var(--colorS),var(--colorP),#111 70%);
+  }
+ }
