@@ -79,7 +79,7 @@ body{
 .canvasH{
   transform: scale(1.2);
 }
-a{
+.nav_child h2{
   box-sizing: border-box;
   padding-top: 25px;
   width: 100%;
@@ -128,45 +128,13 @@ label p:last-child{
   animation-fill-mode: forwards;
 
 }
-.container{
-  margin: 40px auto;
-  width: 600px;
-  height: 450px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  animation-name: together;
-  animation-duration:  2s;
-  animation-fill-mode: forwards;
 
-}
  
 
-.container__child{
-position: relative;
-color: white;
-border: none;
-text-align: center;
-overflow: hidden;
-}
 
-.shadow{
 
-  position: absolute;
-  top: 0;
-  box-sizing: border-box;
-  padding-top: 50%;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  clip-path: circle(0% at 50% 50%);
-  background-color: transparent;
-  transition: all 0.5s 0.3s;
-  
 
-}
-.shadow p{
-  margin: 0 10px;
-}
+
 @keyframes colorLogoP {
   from{
     color: #000;
@@ -208,48 +176,6 @@ overflow: hidden;
   }
 }
 
-.right {
-  box-shadow: inset 0 0 150px 80px var(--colorP);
-
-}
-.left {
-  box-shadow: inset 0 0 150px 80px var(--colorS);
-
-}
- .titulo{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50px;
-  z-index: 2;
-}
-
-
-.rondas10 img{
-  position:absolute;
-  left: 0;
-  z-index: -1;
-}
-
-.rondas15 img{
-  position:absolute;
-  left: 0;
-  z-index: -1;
-  
-
-}
-.rondas10{
-  box-shadow: inset 0 0 30px 20px var(--colorP);
-  transition: box-shadow 0.5s ease;
-}
-.rondas15{
-  box-shadow: inset 0 0 30px 20px var(--colorS);
-  transition: box-shadow 0.5s ease;
-
-}
-
-
-
 img{
   display: inline-block;
   width: 300px;
@@ -259,33 +185,14 @@ img{
 
   }
 
-  .nav_child:hover a{
+  .nav_child:hover h2{
     color: var(--colorP);
     text-shadow: 0 0 10px var(--colorSS),0 0 20px var(--colorSS),0 0 30px var(--colorSS),0 0 40px var(--colorSS);
 
   }
 
 
-  .rondas10:hover >.shadow-ragnarok{
-    clip-path: circle(100% at 50% 50%);
-    background-color: var(--colorPP);
-    opacity: 0.6;
-    
-  
-  }
-.rondas10:hover{
-    box-shadow: inset 0 0 0 0 transparent
-  }
-.rondas15:hover{
-  box-shadow: inset 0 0 0 0 transparent
-}
-.rondas15:hover .shadow-history{
-  clip-path: circle(100% at 50% 50%);
-  background-color: var(--colorSS);
-  opacity: 0.6;
-  
-
-}
+ 
 
 .lds-ellipsis {
   display: flex;

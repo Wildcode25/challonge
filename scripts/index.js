@@ -10,16 +10,17 @@ let band =false;
 let eva;
 
 class CanvasObject{
-    constructor(c){
+    constructor(c, st){
         this.frames = [],
         this.stages = new Image(),
+        this.stages.src = st,
         this.canva = c;
     }
 }
 
-let objectR = new CanvasObject(canvasR);
-let objectT = new CanvasObject(canvasT);
-let objectH = new CanvasObject(canvasH);
+let objectR = new CanvasObject(canvasR,`../framesRengoku/stages/descarga.jpg`);
+let objectT = new CanvasObject(canvasT, `../framesGoku/stages/descarga.jpg`);
+let objectH = new CanvasObject(canvasH, `../framesMinato/descarga.jpg`);
 let objectP = new CanvasObject(canvasP);
 let i=0;
 let e=0;
@@ -39,11 +40,6 @@ for ( i = 0; i < 12; i++) {
         console.log(i);
     }
 preload();
-objectT.stages.src = `../framesRengoku/stages/descarga.jpg`;
-objectR.stages.src = `../framesGoku/stages/descarga.jpg`;
-objectH.stages.src = `../framesMinato/descarga.jpg`;
-
-
 window.addEventListener("load", drawNavR);
 
 function drawNavR(){
@@ -77,7 +73,7 @@ history.addEventListener("mouseover",starAnimationH);
 history.addEventListener("mouseout", endAnimation);
 let interval;
 
-function starAnimation(hola){
+function starAnimation(){
     band = true;
     objero = objectT;
     interval = setInterval(naruto, 80);
